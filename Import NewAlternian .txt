@@ -1,0 +1,58 @@
+/* Import NewAlternian */
+
+@font-face {
+    font-family: 'NewAlternian';
+    src: url('https://homestuck.net/resources/fonts/New%20Alternian%20by%20orangeypeels.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+	font-family: 'NewAlternian';
+	src: url('https://homestuck.net/resources/fonts/New%20Alternian%20by%20orangeypeels.ttf');
+	font-style: italic;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'NewAlternian';
+	src: url('https://homestuck.net/resources/fonts/New%20Alternian%20by%20orangeypeels.ttf');
+	font-weight: bold;
+	font-style: normal;
+} 
+
+@font-face {
+	font-family: 'NewAlternian';
+	src: url('https://homestuck.net/resources/fonts/New%20Alternian%20by%20orangeypeels.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* Backwards Compatibility */
+
+:root {
+	--line-spacing: var(--message-line-spacing);
+}
+
+/* Apply styles */
+
+::-webkit-input-placeholder, body, button, input, select, textarea {
+    font-family: 'NewAlternian, 'Whitney', sans-serif !important;
+    word-spacing: var(--word-spacing, initial);
+    letter-spacing: var(--letter-spacing, initial);
+}
+
+/* Adjust formatted text line-height */
+
+[class*="messageContent-" i] {
+    line-height: var(--message-line-spacing, initial) !important;
+}
+
+/* Scale up timestamps & "Edited" text */
+
+[class*="group-spacing" i] [class*="timestamp"],
+[class*="messageContent-" i] time {
+    font-size: .9rem;
+}
